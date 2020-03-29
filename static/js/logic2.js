@@ -70,28 +70,28 @@ function createMap(earthquakes, tectonicPlates) {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.light",
-    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3RlZzBveTAyMWgzZW4yMmhqdm5iNm4ifQ.hq8K8gwIF5QKuQJFaMyaiA"
+    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3Rld3hlcDAyNm8zbXFsdnJ3M2F5MGMifQ.WVZKs3Ya5luN4GvVc4Z2jA"
     });
 
     var outdoors = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.outdoors",
-    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3RlZzBveTAyMWgzZW4yMmhqdm5iNm4ifQ.hq8K8gwIF5QKuQJFaMyaiA"
+    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3Rld3hlcDAyNm8zbXFsdnJ3M2F5MGMifQ.WVZKs3Ya5luN4GvVc4Z2jA"
     });
 
     var streetmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.streets",
-    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3RlZzBveTAyMWgzZW4yMmhqdm5iNm4ifQ.hq8K8gwIF5QKuQJFaMyaiA"
+    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3Rld3hlcDAyNm8zbXFsdnJ3M2F5MGMifQ.WVZKs3Ya5luN4GvVc4Z2jA"
     });
 
     var dark = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.dark",
-    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3RlZzBveTAyMWgzZW4yMmhqdm5iNm4ifQ.hq8K8gwIF5QKuQJFaMyaiA"
+    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3Rld3hlcDAyNm8zbXFsdnJ3M2F5MGMifQ.WVZKs3Ya5luN4GvVc4Z2jA"
     });
 
   // Define a baseMaps object to hold our base layers
@@ -132,6 +132,7 @@ function createMap(earthquakes, tectonicPlates) {
             grades = [0,1,2,3,4,5],
             labels = [];
 
+        div.innerHTML += 'Magnitude:<br>'
         // loop through our density intervals and generate a label with a colored square for each interval
         for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
