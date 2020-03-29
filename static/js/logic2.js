@@ -151,7 +151,7 @@ function createMap(earthquakes, tectonicPlates) {
 
         var div = L.DomUtil.create('div', 'info legend');
 
-        div.innerHTML += 'Earthquakes within the last 24 hours.'
+        div.innerHTML += 'Earthquakes within the last week.'
 
         return div;
     };
