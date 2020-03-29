@@ -114,7 +114,7 @@ function createMap(earthquakes, tectonicPlates) {
       37.09, -95.71
     ],
     zoom: 5,
-    layers: [outdoors, earthquakes]
+    layers: [outdoors, earthquakes,tectonicPlates]
   });
 
   // Create a layer control
@@ -144,4 +144,17 @@ function createMap(earthquakes, tectonicPlates) {
     };
 
     legend.addTo(myMap);
+
+    var title = L.control({position: 'bottomleft'});
+
+    title.onAdd = function (myMap) {
+
+        var div = L.DomUtil.create('div', 'info legend');
+
+        div.innerHTML += 'Earthquakes within the last 24 hours.'
+
+        return div;
+    };
+
+    title.addTo(myMap);
 }
