@@ -7,7 +7,7 @@ console.log('geo json import!!!!', geoJson);
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.light",
-    accessToken: API_KEY
+    accessToken: "pk.eyJ1IjoiZGFtdWRqZTkxIiwiYSI6ImNrM3RlZzBveTAyMWgzZW4yMmhqdm5iNm4ifQ.hq8K8gwIF5QKuQJFaMyaiA"
     });
 
       // Create our map, giving it the streetmap and earthquakes layers to display on load
